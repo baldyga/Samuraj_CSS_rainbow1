@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --navHeight: 10vh;
+    --headerHeight: 90vh;
+    --mainHeight: 200vh;
+}
+html {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+    background-color: #000;
+    height: var(--navHeight);
+    line-height: var(--navHeight);
+    top: 0;
+    left: 0;
+}
+header {
+    background-color: red;
+    height: var(--headerHeight);
+    line-height: var(--headerHeight);
+    top: 10vh;
+    left: 0;
+}
+main {
+    height: var(--mainHeight);
+    background-image: linear-gradient(45deg, green 0%, blue 40%, violet 70%, yellow 100%);
+    line-height: var(--mainHeight);
+    position: relative;
+    margin-top: calc(var(--navHeight) + var(--headerHeight));
+}
+nav, header {
+    position: fixed;
+    width: 100%;
+}
